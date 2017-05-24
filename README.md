@@ -1,11 +1,11 @@
 # Índice
 
 1. [Ambiente de desenvolvimento](#ambiente-de-desenvolvimento)
-  - [Instalar XAMPP](#Instalar-xampp)
-  - [Observações sobre o XAMPP](#obs)
-2. [Arquitetura do projeto](#Arquitetura-do-projeto)
-3. [Prevenção de erros](#erros)
-4. [OFF-Topic](#OFF-TOPIC)
+2. [Instalar XAMPP](#Instalar-xampp)
+3. [Observações sobre o XAMPP](#obs)
+4. [Arquitetura do projeto](#Arquitetura-do-projeto)
+5. [Prevenção de erros](#erros)
+6. [OFF-Topic](#OFF-TOPIC)
 
 ***
 # <a id="ambiente-de-desenvolvimento">Ambiente de desenvolvimento</a>
