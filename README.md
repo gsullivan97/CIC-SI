@@ -35,8 +35,9 @@
 
 # <a id="erros">Prevenção de erros</a>
  * Caso o localhost do seu xampp precise ser configurado em uma porta diferente, é necessário atualizar o arquivo de configuração do CodeIgniter que seta a url base para o projeto. Esse arquivo fica no seguinte diretório: ..\application\config
- * Altere essa linha `$config['base_url'] = 'http://localhost:8080/CIC-SI/';`
- * No exemplo acima, a porta do xampp estava como 8080, coloque a porta na qual você configurou
+ * Altere essa linha `$config['base_url'] = 'http://localhost:8080/CIC-SI/';` (no projeto a pasta está com o nome 'rh-app')
+ * No exemplo acima, a porta do xampp estava como 8080, coloque a porta na qual você configurou. 
+ * A pasta 'CIC-SI' é referente ao caminho onde está o seu projeto no xampp. Então será necessário configurar essa linha corretamente conforme seu diretório de pastas e sua configuração.
 
 ***
 # <a id="OFF-TOPIC">OFF-TOPIC</a>
