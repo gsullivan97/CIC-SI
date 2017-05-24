@@ -44,14 +44,14 @@
 
 Para quem nunca utilizou o GitHub, existem milhares de tutoriais no youtube.
 
-Nunca, em hipótese alguma, fique dando commits na Branch Master. Sempre baixe a ultima versão de desenvolvimento, somente os líderes podem commitar no mastes e homologação.
+Nunca, em hipótese alguma, fique dando commits na Branch Master. Sempre baixe a ultima versão de desenvolvimento, somente os líderes podem commitar no master e homologação.
 
 Alguns comandos utilizados no git:
-git pull origin master -> atualiza o código local 
-git status -> mostra as mudanças
-git add <nome_do_arquivo> / --all -> adiciona arquivos para serem comitados
-git commit -m "<mensagem>" -> comita as mudanças locais
-git push origin master -> publica mudanças no repositório
+ * git pull origin master -> atualiza o código local 
+ * git status -> mostra as mudanças
+ * git add <nome_do_arquivo> / --all -> adiciona arquivos para serem comitados
+ * git commit -m "<mensagem>" -> comita as mudanças locais
+ * git push origin master -> publica mudanças no repositório
 
 
 Sugestão de editor textos:
