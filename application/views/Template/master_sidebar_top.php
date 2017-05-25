@@ -19,7 +19,7 @@
 							</a>
 						</li>
 						<li><a href="javascript:;">Help</a></li>
-						<li><a href="<?php echo site_url('Main_Controller/Login'); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+						<li><a href="<?php echo site_url('Main_Controller/Logout'); ?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
 					</ul>
 				</li>
 

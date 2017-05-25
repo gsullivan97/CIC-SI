@@ -40,6 +40,12 @@
  * A pasta 'CIC-SI' é referente ao caminho onde está o seu projeto no xampp. Então **será necessário configurar essa linha corretamente conforme seu diretório de pastas e sua configuração**.
 
 ***
+# <a id="login">Notificação</a>
+
+Para fazer as notificações foi utiliado o plugin bootstrap-growl,comandos e configurações no link abaixo:
+https://github.com/ifightcrime/bootstrap-growl
+
+***
 # <a id="OFF-TOPIC">OFF-TOPIC</a>
 
 Para quem nunca utilizou o GitHub, existem milhares de tutoriais no youtube.
