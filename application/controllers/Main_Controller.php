@@ -24,9 +24,11 @@ class Main_Controller extends CI_Controller {
     {
         parent::__construct();
 
-            // Load session library
+        // Load session library
         $this->load->library('session');
+        error_reporting(0);
     }
+
 
     public function index()
     {   
@@ -114,7 +116,7 @@ class Main_Controller extends CI_Controller {
                 //teste
                 //print_r($this->session->userdata['User']);
                 //printf('Usuario não tem permissão');
-            
+
             $this->data['mensagem'] = "Usuario não tem permissão!";
             $this->load->view('errors/login_error_teste',$this->data);
             $this->index();
