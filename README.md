@@ -41,9 +41,9 @@
 
 ***
 # <a id="login">Notificação</a>
-
-Para fazer as notificações foi utiliado o plugin bootstrap-growl,comandos e configurações no link abaixo:
-https://github.com/ifightcrime/bootstrap-growl
+	
+* Para fazer as notificações foi utiliado o plugin bootstrap-growl,comandos e configurações no link abaixo:
+	https://github.com/ifightcrime/bootstrap-growl
 
 ***
 # <a id="OFF-TOPIC">OFF-TOPIC</a>
