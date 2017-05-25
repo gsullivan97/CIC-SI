@@ -26,6 +26,7 @@ class Main_Controller extends CI_Controller {
 
             // Load session library
             $this->load->library('session');
+            error_reporting(0);
         }
 
         public function index()
