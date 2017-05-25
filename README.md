@@ -37,7 +37,6 @@
  * Se você alterar o nome da pasta do projeto, ou colocar ela em um caminho diferente dentro da pasta 'C:\xampp\htdocs', vai ser necessário atualizar o arquivo de configuração do CodeIgniter que seta a url base para o projeto. Esse arquivo fica no seguinte diretório: 'C:\xampp\htdocs\CIC-SI\application\config' (Isso se você colocou a pasta do projeto exatamente como este exemplo)
  * Altere essa linha do arquivo `$config['base_url'] = 'http://localhost/CIC-SI/';` para o diretório que você colocou a pasta do projeto
  * Exemplo: A pasta foi colocada neste diretório: 'C:\xampp\htdocs\Back-end\CIC-SI', **consequentemente**, a variável **base_url** deve ser alterada para `$config['base_url'] = 'http://localhost/Back-end/CIC-SI/';`
- * A pasta 'CIC-SI' é referente a pasta do projeto, se você alterar o nome, atualize o arquivo de configuração.
 
 ***
 # <a id="login">Notificação</a>
