@@ -34,10 +34,10 @@
 ***
 
 # <a id="erros">Prevenção de erros **(LEIA ESSA PARTE)**</a>
- * Caso o localhost do seu xampp precise ser configurado em uma porta diferente, é necessário atualizar o arquivo de configuração do CodeIgniter que seta a url base para o projeto. Esse arquivo fica no seguinte diretório: ..\application\config
- * Altere essa linha `$config['base_url'] = 'http://localhost:8080/CIC-SI/';` **(no projeto a pasta está com o nome 'rh-app')**
- * No exemplo acima, a porta do xampp estava como 8080, coloque a porta na qual você configurou. 
- * A pasta 'CIC-SI' é referente ao caminho onde está o seu projeto no xampp. Então **será necessário configurar essa linha corretamente conforme seu diretório de pastas e sua configuração**.
+ * Se você alterar o nome da pasta do projeto, ou colocar ela em um caminho diferente dentro da pasta 'C:\xampp\htdocs', vai ser necessário atualizar o arquivo de configuração do CodeIgniter que seta a url base para o projeto. Esse arquivo fica no seguinte diretório: 'C:\xampp\htdocs\CIC-SI\application\config' (Isso se você colocou a pasta do projeto exatamente como este exemplo)
+ * Altere essa linha do arquivo `$config['base_url'] = 'http://localhost/CIC-SI/';` para o diretório que você colocou a pasta do projeto
+ * Exemplo: A pasta foi colocada neste diretório: 'C:\xampp\htdocs\Back-end\CIC-SI', **consequentemente**, a variável **base_url** deve ser alterada para `$config['base_url'] = 'http://localhost/Back-end/CIC-SI/';`
+ * A pasta 'CIC-SI' é referente a pasta do projeto, se você alterar o nome, atualize o arquivo de configuração.
 
 ***
 # <a id="login">Notificação</a>
