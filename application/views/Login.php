@@ -32,17 +32,18 @@
     <div class="login_wrapper">
       <div class="animate form login_form">
         <section class="login_content">
-          <form>
+          <form action="<?php echo site_url('Main_Controller/VerificaUsuario'); ?>" method="POST">
             <h1>Login</h1>
             <div>
-              <input type="text" class="form-control" placeholder="Usuário" required="" />
+              <input type="text" class="form-control" placeholder="Usuário" name="Usuario" required="" />
             </div>
             <div>
-              <input type="password" class="form-control" placeholder="Senha" required="" />
+              <input type="password" class="form-control" placeholder="Senha" name="Senha" required="" />
             </div>
             <div>
-              <a class="btn btn-default submit" href="<?php echo site_url('Main_Controller/index'); ?>">Log in</a>
+                <button class="btn btn-default submit">Log in</button>
               <a class="reset_pass" href="#">Lost your password?</a>
+              
             </div>
 
             <div class="clearfix"></div>
@@ -102,4 +103,4 @@
     </div>
   </div>
 </body>
-</html>
+</html>     
