@@ -29,6 +29,8 @@
                     <li><a><i class="fa fa-edit"></i> Cadastros Básicos <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro'); ?>">Cadastrar Empresas</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>">Cadastrar CNAE</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>">Cadastrar Grupo Empresa</a></li>
                             <li><a href="#">Cadastrar Filiais</a></li>
                             <li><a href="#">Cadastrar Departamentos</a></li>
                             <li><a href="#">Cadastrar Seções</a></li>
