@@ -24,12 +24,12 @@
                     <label for="cbo">CBO * :</label>
                     <input type="text" id="cbo" class="form-control" name="cbo" required /><br />
                     <label for="heard">Tipo *:</label>
-                    <select id="heard" class="form-control" required>
-                        <option value="">Escolha uma opção..</option>
+                    <select class="form-control" id="select2_single" required>
+                        <option value="" disabled selected>Escolha uma opção..</option>
                         <option value="press">Press</option>
                         <option value="net">Internet</option>
                         <option value="mouth">Word of mouth</option>
-                    </select><br />
+                    </select><br/><br/>
 
                     <label for="message">Descrição (20 chars min, 100 max) :</label>
                     <textarea id="message" required="required" class="form-control" name="message" 
