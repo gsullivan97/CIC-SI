@@ -61,6 +61,16 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Grupo_Empresa','Template',3);
     }
 
+    public function Centro_Custo()
+    {
+        $this->render('Centro_Custo','Template',3);
+    }
+
+    public function Cadastro_Setor()
+    {
+        $this->render('Cadastro_Setor','Template',3);
+    }    
+
     public function Login()
     {
         $this->load->view('Login');
@@ -83,7 +93,7 @@ class Main_Controller extends CI_Controller {
             //simulação banco
             //info_User simula o que data recebera da pesquisa do banco na model
             //funcção onde verifica se o usuario está no banco
-        $info_User = ["usuario"=>"zekken97", "nome"=>"Greg A. Sullivan", "permissao"=>2];
+        $info_User = ["usuario"=>"zekken97", "nome"=>"Greg A. Sullivan", "permissao"=>7];
             //fim_simulação
         
             //caso o usuario não seja encontrado no banco ele ira retornar falso
