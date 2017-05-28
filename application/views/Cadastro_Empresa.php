@@ -42,7 +42,7 @@
 						<div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12">Natureza Juridica</label>
 							<div class="col-md-6 col-sm-6 col-xs-12">
-								<select class="form-control" id="select2_single">
+								<select class="select2_single form-control">
 									<option disabled="disabled" selected="selected">Escolha uma opção</option>
 									<option>Órgão Público do Poder Executivo Federal</option>
 									<option>Órgão Público do Poder Executivo Estadual ou do Distrito Federal</option>
@@ -119,7 +119,7 @@
 						<div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12">Município</label>
 							<div class="col-md-4 col-sm-4 col-xs-4">
-								<select class="form-control">
+								<select class="form-control select2_single">
 									<option disabled="disabled" selected="selected">Escolha uma opção</option>
 									<option>Adicionar opções via banco</option>
 								</select>
@@ -129,7 +129,7 @@
 						<div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12">Unidade Federal</label>
 							<div class="col-md-4 col-sm-4 col-xs-4">
-								<select class="form-control">
+								<select class="form-control select2_single">
 									<option disabled="disabled" selected="selected">Escolha uma opção</option>
 									<option>Acre</option>
 									<option>Alagoas</option>

@@ -25,7 +25,7 @@
 
                 <label>Departamento * :</label>
 
-              <select class="form-control" id="select2_single" required>
+              <select class="form-control select2_single" required>
                   <option value="" disabled selected>Selecione um departamento</option>
                   <option value="GER">Gerência</option>
                   <option value="GESTQ">Gestão de Qualidade</option>
