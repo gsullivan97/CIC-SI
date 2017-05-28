@@ -1,9 +1,9 @@
 <!-- page content -->
-<div class="right_col" role="main" style="height: 0px;">
+<div class="right_col" role="main">
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Cadastros básicos <small>Cadastre novos grupos de empresas</small></h3>
+                <h3>Cadastros básicos <small>Cadastre uma nova empresa</small></h3>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
 						<div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12">Natureza Juridica</label>
 							<div class="col-md-6 col-sm-6 col-xs-12">
-								<select class="form-control">
+								<select class="form-control" id="select2_single">
 									<option disabled="disabled" selected="selected">Escolha uma opção</option>
 									<option>Órgão Público do Poder Executivo Federal</option>
 									<option>Órgão Público do Poder Executivo Estadual ou do Distrito Federal</option>
