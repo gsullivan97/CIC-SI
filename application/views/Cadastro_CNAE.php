@@ -27,7 +27,7 @@
                               data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
                               data-parsley-validation-threshold="10"></textarea><br />
 
-                    <br/>
+                    <div class="clearfix"></div>
                     <span class="btn btn-primary">Cadastrar</span>
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 

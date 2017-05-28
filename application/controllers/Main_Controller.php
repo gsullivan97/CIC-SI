@@ -76,6 +76,11 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Setor','Template',3);
     }    
 
+    public function Cadastro_Departamento()
+    {
+        $this->render('Cadastro_Departamento','Template',3);
+    }  
+
     public function Login()
     {
         $this->load->view('Login');
