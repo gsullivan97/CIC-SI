@@ -30,6 +30,7 @@
                         <ul class="nav child_menu">
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro'); ?>">Cadastrar Pessoa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>">Cadastrar CNAE</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Empresa'); ?>">Cadastrar Empresa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>">Cadastrar Grupo Empresa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Centro_Custo'); ?>">Cadastrar Centro Custo</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Setor'); ?>">Cadastrar Setor</a></li>
