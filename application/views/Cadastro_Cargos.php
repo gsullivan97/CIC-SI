@@ -24,16 +24,16 @@
                     <label for="cbo">CBO * :</label>
                     <input type="text" id="cbo" class="form-control" name="cbo" required /><br />
                     <label for="heard">Tipo *:</label>
-                    <select class="form-control select2_single" required>
+                    <select class="form-control select2_single" id="tipo" name="tipo" required>
                         <option value="" disabled selected>Escolha uma opção..</option>
                         <option value="press">Press</option>
                         <option value="net">Internet</option>
                         <option value="mouth">Word of mouth</option>
                     </select><br/><br/>
 
-                    <label for="message">Descrição (20 chars min, 100 max) :</label>
+                    <label for="message">Descrição (20 chars min, 500 max) :</label>
                     <textarea id="message" required="required" class="form-control" name="descricao" 
-                              data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" 
+                              data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="500" 
                               data-parsley-minlength-message="Você precisa digitar no mínimo 20 caracteres"
                               data-parsley-validation-threshold="10"></textarea><br />
 
