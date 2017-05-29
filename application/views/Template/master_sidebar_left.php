@@ -28,9 +28,9 @@
                     <li><a href="<?php echo site_url('Main_Controller/index'); ?>"><i class="fa fa-home"></i> Home </a></li>
                     <li><a><i class="fa fa-edit"></i> Cadastros Básicos <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="<?php echo site_url('Main_Controller/Cadastro'); ?>">Cadastrar Pessoa</a></li>
-                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>">Cadastrar CNAE</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Pessoa'); ?>">Cadastrar Pessoa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Empresa'); ?>">Cadastrar Empresa</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>">Cadastrar CNAE</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>">Cadastrar Grupo Empresa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Departamento'); ?>">Cadastrar Departamento</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Centro_Custo'); ?>">Cadastrar Centro Custo</a></li>
