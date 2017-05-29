@@ -26,6 +26,9 @@ class Main_Controller extends CI_Controller {
 
         // Load session library
         $this->load->library('session');
+        $this->load->model('Model_teste');
+        // descomentar linha depois que o banco for criado e as configurações setadas no database.php
+        //$this->load->database();
         error_reporting(0);
     }
 
@@ -49,6 +52,21 @@ class Main_Controller extends CI_Controller {
     public function Cadastro_Cargos()
     {
         $this->render('Cadastro_Cargos','Template',3);
+        
+        $nome=$this->input->post('fullname');
+        $CBO=$this->input->post('cbo');
+        $tipo=$this->input->post('tipo');
+        $descricao=$this->input->post('descricao');
+        
+        //teste de post para chegada de variaveis
+        //printf($nome."  ".$CBO."  ".$tipo." ".$descricao);
+        
+        //sera modificado para uma verificação atraves de um isset depois
+        if($nome !=''||$CBO !=''||$tipo !=''||$descricao !='')
+        {
+            printf('estou funcionando');
+            $this->Model_teste->Insere_Cadastro_Cargos($nome,$CBO,$tipo,$descricao);
+        }
     }
 
     public function Cadastro_CNAE()
@@ -115,6 +133,10 @@ class Main_Controller extends CI_Controller {
             //funcção onde verifica se o usuario está no banco
         $info_User = ["usuario"=>"zekken97", "nome"=>"Greg A. Sullivan", "permissao"=>7];
             //fim_simulação
+        //$info_User = $this->Model_teste->VerificaLogin($usuario,$senha);
+            //simulação do banco de desenvolvimento
+            
+            //fim simulação
         
             //caso o usuario não seja encontrado no banco ele ira retornar falso
             //o que resultara numa mensagem de erro
@@ -134,7 +156,7 @@ class Main_Controller extends CI_Controller {
             $this->index();
         }
     }
-    
+
     public function render($the_view, $template, $nivelAcesso)
     {
         if($this->session->userdata['User']==null)
