@@ -86,6 +86,11 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Pessoa','Template',3);
     } 
 
+    public function Editar_CargosSalarios()
+    {
+        $this->render('Editar_CargosSalarios','Template',3);
+    }
+
     public function Login()
     {
         $this->load->view('Login');

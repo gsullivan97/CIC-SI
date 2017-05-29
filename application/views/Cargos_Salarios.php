@@ -26,12 +26,11 @@
                         <table id="datatable" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Nome</th>
+                                    <th>Cargo</th>
+                                    <th>Idade</th>
+                                    <th>Data Admissão</th>
+                                    <th>Salário</th>
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -42,11 +41,10 @@
                                     echo '<tr>
                         <td>Tiger Nixon</td>
                         <td>System Architect</td>
-                        <td>Edinburgh</td>
                         <td>61</td>
                         <td>2011/04/25</td>
                         <td>$320,800</td>
-                        <td><a href="#"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
+                        <td><a href="Editar_CargosSalarios"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
                       </tr>';
                                 }
                                 ?>

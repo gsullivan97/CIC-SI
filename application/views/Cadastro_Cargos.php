@@ -24,7 +24,7 @@
                     <label for="cbo">CBO * :</label>
                     <input type="text" id="cbo" class="form-control" name="cbo" required /><br />
                     <label for="heard">Tipo *:</label>
-                    <select class="form-control" id="select2_single" required>
+                    <select class="form-control select2_single" required>
                         <option value="" disabled selected>Escolha uma opção..</option>
                         <option value="press">Press</option>
                         <option value="net">Internet</option>
@@ -34,7 +34,7 @@
                     <label for="message">Descrição (20 chars min, 100 max) :</label>
                     <textarea id="message" required="required" class="form-control" name="message" 
                               data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" 
-                              data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                              data-parsley-minlength-message="Você precisa digitar no mínimo 20 caracteres"
                               data-parsley-validation-threshold="10"></textarea><br />
 
                     <br/>
