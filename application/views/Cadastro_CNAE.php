@@ -18,9 +18,9 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate>
-                    <label for="fullname">Código * :</label>
-                    <input type="text" id="fullname" class="form-control" name="fullname" required /><br />
+                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>" method="POST">
+                    <label for="codigo">Código * :</label>
+                    <input type="text" id="codigo" class="form-control" name="codigo" required /><br />
                     <label for="message">Descrição (20 chars min, 100 max) :</label>
                     <textarea id="message" required="required" class="form-control" name="message" 
                               data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" 
@@ -40,4 +40,3 @@
 </div>
 </div>
 <!-- /page content -->
-
