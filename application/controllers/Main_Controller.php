@@ -28,7 +28,7 @@ class Main_Controller extends CI_Controller {
         $this->load->library('session');
         $this->load->model('Model_teste');
         // descomentar linha depois que o banco for criado e as configurações setadas no database.php
-        $this->load->database();
+        //$this->load->database();
         error_reporting(0);
     }
 
