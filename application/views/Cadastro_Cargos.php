@@ -19,8 +19,8 @@
 
                 <!-- start form for validation -->
                 <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Cargos'); ?>" method="POST">
-                    <label for="fullname">Nome * :</label>
-                    <input type="text" id="fullname" class="form-control" name="fullname" required /><br />
+                    <label for="nome">Nome * :</label>
+                    <input type="text" id="nome" class="form-control" name="nome" required /><br />
                     <label for="cbo">CBO * :</label>
                     <input type="text" id="cbo" class="form-control" name="cbo" required /><br />
                     <label for="heard">Tipo *:</label>
