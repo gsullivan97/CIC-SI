@@ -21,11 +21,8 @@
                 <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>" method="POST">
                     <label for="codigo">Código * :</label>
                     <input type="text" id="codigo" class="form-control" name="codigo" required /><br />
-                    <label for="message">Descrição (20 chars min, 100 max) :</label>
-                    <textarea id="message" required="required" class="form-control" name="message" 
-                              data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" 
-                              data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                              data-parsley-validation-threshold="10"></textarea><br />
+                    <label for="message">Descrição * :</label>
+                    <textarea id="message" required class="form-control" name="message"></textarea><br />
 
                     <div class="clearfix"></div>
                     <span class="btn btn-primary">Cadastrar</span>

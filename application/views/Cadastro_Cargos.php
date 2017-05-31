@@ -1,5 +1,5 @@
 <!-- page content -->
-<div class="right_col" role="main" style="height: 0px;">
+<div class="right_col" role="main">
     <div class="">
         <div class="page-title">
             <div class="title_left">
@@ -18,27 +18,33 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Cargos'); ?>" method="POST">
-                    <label for="nome">Nome * :</label>
-                    <input type="text" id="nome" class="form-control" name="nome" required /><br />
+                <form id="demo-form" data-parsley-validate>
+                    <label for="fullname">Nome * :</label>
+                    <input type="text" id="fullname" class="form-control" name="fullname" required /><br />
+
                     <label for="cbo">CBO * :</label>
                     <input type="text" id="cbo" class="form-control" name="cbo" required /><br />
-                    <label for="heard">Tipo *:</label>
-                    <select class="form-control select2_single" id="tipo" name="tipo" required>
-                        <option value="" disabled selected>Escolha uma opção..</option>
-                        <option value="press">Press</option>
-                        <option value="net">Internet</option>
-                        <option value="mouth">Word of mouth</option>
-                    </select><br/><br/>
 
-                    <label for="message">Descrição (20 chars min, 500 max) :</label>
-                    <textarea id="message" required="required" class="form-control" name="descricao" 
-                              data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="500" 
-                              data-parsley-minlength-message="Você precisa digitar no mínimo 20 caracteres"
-                              data-parsley-validation-threshold="10"></textarea><br />
+                    <label for="formacaoDes">Formação desejada * :</label>
+                    <input type="text" id="formacaoDes" class="form-control" name="formacaoDes" required /><br />
 
-                    <br/>
-                    <button class="btn btn-primary" type="submit">Cadastrar</button>
+                    <label for="formacaoMin">Formação mínima * :</label>
+                    <input type="text" id="formacaoMin" class="form-control" name="formacaoMin" required /><br />
+
+                    <label for="cargaHr">Carga horária * :</label>
+                    <input type="text" id="cargaHr" class="form-control" name="cargaHr" required /><br />
+
+                    <label for="salario">Salário * :</label>
+                    <input type="text" id="salario" class="form-control" name="salario" required /><br />
+
+                    <label for="beneficios">Benefícios * :</label><br>
+                    <input type="checkbox" name="transporte" /> Vale transporte <br />
+                    <input type="checkbox" name="alimentacao" /> Alimentação <br />
+                    <input type="checkbox" name="odontologico" /> Plano odontológico <br />
+                    <input type="checkbox" name="saude" /> Plano de saúde <br /> <br>
+
+                    <br>
+                    <span class="btn btn-primary">Cadastrar</span>
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 
                 </form>
