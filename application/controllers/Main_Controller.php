@@ -28,7 +28,7 @@ class Main_Controller extends CI_Controller {
         $this->load->library('session');
         $this->load->model('Model_teste');
         // descomentar linha depois que o banco for criado e as configurações setadas no database.php
-        //$this->load->database();
+        $this->load->database();
         error_reporting(0);
     }
 
@@ -53,7 +53,7 @@ class Main_Controller extends CI_Controller {
     {
         $this->render('Cadastro_Cargos','Template',3);
         
-        $nome=$this->input->post('fullname');
+        $nome=$this->input->post('nome');
         $CBO=$this->input->post('cbo');
         $tipo=$this->input->post('tipo');
         $descricao=$this->input->post('descricao');
@@ -62,16 +62,24 @@ class Main_Controller extends CI_Controller {
         //printf($nome."  ".$CBO."  ".$tipo." ".$descricao);
         
         //sera modificado para uma verificação atraves de um isset depois
-        if($nome !=''||$CBO !=''||$tipo !=''||$descricao !='')
+        if (isset($nome, $CBO, $tipo, $descricao))
         {
             printf('estou funcionando');
-            $this->Model_teste->Insere_Cadastro_Cargos($nome,$CBO,$tipo,$descricao);
+            $this->Model_teste->Insere_Cadastro_Cargos($nome, $CBO, $tipo, $descricao);
         }
     }
 
     public function Cadastro_CNAE()
     {
         $this->render('Cadastro_CNAE','Template',3);
+
+        $codigo = $this->input->post('codigo');
+        $descricao = $this->input->post('descricao');
+
+        if (isset($codigo, $descricao))
+        {
+            $this->Model_teste->Insere_Cadastro_CNAE($codigo, $descricao);
+        }
     }
 
     public function Cadastro_Empresa()
@@ -82,6 +90,13 @@ class Main_Controller extends CI_Controller {
     public function Cadastro_Grupo_Empresa()
     {
         $this->render('Cadastro_Grupo_Empresa','Template',3);
+
+        $descricao = $this->input->post('descricao');
+
+        if (isset($descricao))
+        {
+            $this->Model_teste->Insere_Cadastro_Grupo_Empresa($descricao);
+        }
     }
 
     public function Centro_Custo()
@@ -97,6 +112,14 @@ class Main_Controller extends CI_Controller {
     public function Cadastro_Departamento()
     {
         $this->render('Cadastro_Departamento','Template',3);
+
+        $id_secao = $this->input->post('id_secao');
+        $nome = $this->input->post('nome');
+
+        if (isset($id_secao, $nome))
+        {
+            $this->Model_teste->Insere_Cadastro_Departamento($id_secao, $nome);
+        }
     }  
 
     public function Cadastro_Pessoa()
