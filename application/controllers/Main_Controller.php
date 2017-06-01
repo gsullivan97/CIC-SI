@@ -87,6 +87,11 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Empresa','Template',3);
     }
 
+    public function Cadastro_Curriculo()
+    {
+        $this->render('Cadastro_Curriculo','Template',3);
+    }
+
     public function Cadastro_Grupo_Empresa()
     {
         $this->render('Cadastro_Grupo_Empresa','Template',3);

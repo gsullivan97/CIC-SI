@@ -13,6 +13,8 @@
 <script src="<?php echo base_url('assets/vendors/jquery/dist/jquery.min.js') ?> "></script>
 <!-- Bootstrap -->
 <script src="<?php echo base_url('assets/vendors/bootstrap/dist/js/bootstrap.min.js') ?> "></script>
+<!-- AppendTable -->
+<script src="<?php echo base_url('assets/vendors/append-table/append-table.js') ?> "></script>
 <!-- jquery.inputmask -->
 <script src="<?php echo base_url('assets/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js') ?> "></script>
 <!-- FastClick -->
