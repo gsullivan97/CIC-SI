@@ -53,7 +53,7 @@ class Main_Controller extends CI_Controller {
     {
         $this->render('Cadastro_Cargos','Template',3);
         
-        $nome=$this->input->post('nome');
+        $nome=$this->input->post('fullname');
         $CBO=$this->input->post('cbo');
         $tipo=$this->input->post('tipo');
         $descricao=$this->input->post('descricao');
