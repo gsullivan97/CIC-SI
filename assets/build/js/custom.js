@@ -2553,6 +2553,7 @@ function init_JQVmap(){
 					};
 				}();
 
+				$('.datatable').dataTable();
 				$('#datatable').dataTable();
 
 				$('#datatable-keytable').DataTable({

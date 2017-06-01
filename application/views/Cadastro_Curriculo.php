@@ -18,7 +18,7 @@
 			<div class="x_content">
 
 				<!-- start form for validation -->
-				<form id="demo-form" data-parsley-validate class="form-horizontal form-label-left">
+				<form id="formCadCurriculo" data-parsley-validate class="form-horizontal form-label-left">
 					
 					<fieldset>
 						<legend>Informações</legend>
@@ -171,7 +171,7 @@
 							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="instituicao">Instituição <span class="required">*</span>
 							</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
-								<input type="text" id="instituicao" required="required" class="form-control col-md-7 col-xs-12">
+								<input type="text" id="instituicao"class="form-control col-md-7 col-xs-12">
 							</div>
 						</div>
 
@@ -179,14 +179,14 @@
 							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="curso">Curso <span class="required">*</span>
 							</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
-								<input type="text" id="curso" required="required" class="form-control col-md-7 col-xs-12">
+								<input type="text" id="curso" class="form-control col-md-7 col-xs-12">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12">Estado</label>
 							<div class="col-md-4 col-sm-4 col-xs-4">
-								<select id="estado" class="form-control select2_single" required>
+								<select id="estado" class="form-control select2_single">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="1">Concluído</option>
 									<option value="2">Cursando</option>
@@ -196,21 +196,23 @@
 						</div>
 
 						<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          	<button type="button" id="add_formacao_academica" class="btn btn-primary">Adicionar</button>
-                        </div>
+							<button type="button" id="add_formacao_academica" class="btn btn-primary">Adicionar</button>
+						</div>
 
-
-                        <table class="table table-hover col-md-6 col-sm-6 col-xs-12">
-                        	<thead>
-                        		<tr>
-                        			<td>Instituição</td>
-                        			<td>Curso</td>
-                        			<td>Estado</td>
-                        		</tr>
-                        	</thead>
-                        	<tbody id="formacao">
-                        	</tbody>
-                        </table>
+						<div class="x_panel">
+							<table id="gridFormacao" class="table table-hover col-md-6 col-sm-6 col-xs-12">
+								<thead>
+									<tr>
+										<td>Instituição</td>
+										<td>Curso</td>
+										<td>Estado</td>
+										<td width="5px;">Deletar</td>
+									</tr>
+								</thead>
+								<tbody id="formacao">
+								</tbody>
+							</table>
+						</div>
 
 
 					</fieldset>
@@ -225,45 +227,47 @@
 						</div> -->
 
 						<div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="empresa">Empresa <span class="required">*</span>
+							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="empresa">Empresa <span>*</span>
 							</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
-								<input type="text" id="empresa" required="required" class="form-control col-md-7 col-xs-12">
+								<input type="text" id="empresa" class="form-control col-md-7 col-xs-12">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="cargo">Cargo <span class="required">*</span>
+							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="cargo">Cargo <span>*</span>
 							</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
-								<input type="text" id="cargo" required="required" class="form-control col-md-7 col-xs-12">
+								<input type="text" id="cargo" class="form-control col-md-7 col-xs-12">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="atividade_exercida">Atividade exercida <span class="required">*</span>
+							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="atividade_exercida">Atividade exercida <span>*</span>
 							</label>
 							<div class="col-md-4 col-sm-4 col-xs-12">
-								<input type="text" id="atividade_exercida" required="required" class="form-control col-md-7 col-xs-12">
+								<input type="text" id="atividade_exercida" class="form-control col-md-7 col-xs-12">
 							</div>
 						</div>
 
 						<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          	<button type="button" id="add_experiencia_profissional" class="btn btn-primary">Adicionar</button>
-                        </div>
+							<button type="button" id="add_experiencia_profissional" class="btn btn-primary">Adicionar</button>
+						</div>
 
-
-                        <table class="table table-hover col-md-6 col-sm-6 col-xs-12">
-                        	<thead>
-                        		<tr>
-                        			<td>Empresa</td>
-                        			<td>Cargo</td>
-                        			<td>Atv. Exercida</td>
-                        		</tr>
-                        	</thead>
-                        	<tbody id="experiencias">
-                        	</tbody>
-                        </table>
+						<div class="x_panel">
+							<table id="gridExperiencia" class="table table-hover col-md-6 col-sm-6 col-xs-12">
+								<thead>
+									<tr>
+										<td>Empresa</td>
+										<td>Cargo</td>
+										<td>Atv. Exercida</td>
+										<td width="5px;">Deletar</td>
+									</tr>
+								</thead>
+								<tbody id="experiencias">
+								</tbody>
+							</table>
+						</div>
 
 					</fieldset>
 
@@ -308,16 +312,9 @@
 
 					</fieldset>
 
-					<fieldset>
-						<legend>Currículo</legend>
-
-						<label for="message">Anexe seu currículo abaixo</label><br /><br />
-						<input type="file" name="curriculo" required>
-					</fieldset>
-
 					<br/>
 					<hr>
-					<span class="btn btn-primary">Cadastrar</span>
+					<input type="submit" class="btn btn-primary" value="Cadastrar">
 					<a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 
 				</form>
