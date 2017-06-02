@@ -127,14 +127,14 @@ class Main_Controller extends CI_Controller {
         }
     }  
 
-    public function Cadastro_Pessoa()
-    {
-        $this->render('Cadastro_Pessoa','Template',3);
-    } 
-
     public function Editar_CargosSalarios()
     {
         $this->render('Editar_CargosSalarios','Template',3);
+    }
+
+    public function Cadastro_Funcionario()
+    {
+        $this->render('Cadastro_Funcionario','Template',3);
     }
 
     public function Login()
