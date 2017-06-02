@@ -18,7 +18,7 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Empresa'); ?>" method="POST">
+                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>" method="POST">
                     <label for="descricao">Descrição (20 chars min, 100 max) :</label>
                     <textarea id="descricao" required="required" class="form-control" name="descricao" 
                               data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" 
@@ -26,7 +26,7 @@
                               data-parsley-validation-threshold="10"></textarea><br />
 
                     <div class="clearfix"></div>
-                    <span class="btn btn-primary">Cadastrar</span>
+                    <button class="btn btn-primary" type="submit">Cadastrar</button>
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 
                 </form>

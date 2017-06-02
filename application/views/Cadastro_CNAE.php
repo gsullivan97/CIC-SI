@@ -25,7 +25,7 @@
                     <textarea id="message" required class="form-control" name="message"></textarea><br />
 
                     <div class="clearfix"></div>
-                    <span class="btn btn-primary">Cadastrar</span>
+                    <button class="btn btn-primary" type="submit">Cadastrar</button>
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 
                 </form>

@@ -28,7 +28,7 @@ class Main_Controller extends CI_Controller {
         $this->load->library('session');
         $this->load->model('Model_teste');
         // descomentar linha depois que o banco for criado e as configurações setadas no database.php
-        //$this->load->database();
+        $this->load->database();
         error_reporting(0);
     }
 
@@ -81,11 +81,11 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_CNAE','Template',3);
 
         $codigo = $this->input->post('codigo');
-        $descricao = $this->input->post('descricao');
+        $descricao = $this->input->post('message');
 
         if (isset($codigo, $descricao))
         {
-	    printf('Cadastro_CNAE funcionou!');
+	        //printf('Cadastro_CNAE funcionou!');
             $this->Model_teste->Insere_Cadastro_CNAE($codigo, $descricao);
         }
     }
@@ -135,7 +135,7 @@ class Main_Controller extends CI_Controller {
 
         if (isset($descricao))
         {
-	    printf('Cadastro_Grupo_Empresa funcionou!');
+	        //printf('Cadastro_Grupo_Empresa funcionou!');
             $this->Model_teste->Insere_Cadastro_Grupo_Empresa($descricao);
         }
     }
@@ -148,6 +148,13 @@ class Main_Controller extends CI_Controller {
     public function Cadastro_Setor()
     {
         $this->render('Cadastro_Setor','Template',3);
+
+        $nome = $this->input->post('fullname');
+        $departamento = $this->input->post('departamento');
+
+        if(!empty($nome) && !empty($departamento)):
+            $this->Model_teste->Insere_Cadastro_Setor($nome,$departamento);
+        endif;
     }    
 
     public function Cadastro_Departamento()
@@ -159,7 +166,7 @@ class Main_Controller extends CI_Controller {
 
         if (isset($id_secao, $nome))
         {
-	    printf('Cadastro_Departamento funcionou!');
+	        //printf('Cadastro_Departamento funcionou!');
             $this->Model_teste->Insere_Cadastro_Departamento($id_secao, $nome);
         }
     }  

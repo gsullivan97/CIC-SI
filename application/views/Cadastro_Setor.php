@@ -19,13 +19,13 @@
             <div class="x_content">
 
               <!-- start form for validation -->
-              <form id="demo-form" data-parsley-validate>
+              <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Setor'); ?>" method="POST">
                 <label for="fullname">Nome * :</label>
                 <input type="text" id="fullname" class="form-control" name="fullname" required /><br />
 
                 <label>Departamento * :</label>
 
-              <select class="form-control select2_single" required>
+              <select class="form-control select2_single" name="departamento" id="departamento" required>
                   <option value="" disabled selected>Selecione um departamento</option>
                   <option value="GER">Gerência</option>
                   <option value="GESTQ">Gestão de Qualidade</option>
@@ -38,7 +38,7 @@
 
               <br/>
               <br/>
-              <span class="btn btn-primary">Cadastrar</span>
+              <button class="btn btn-primary" type="submit">Cadastrar</button>
               <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 
           </form>

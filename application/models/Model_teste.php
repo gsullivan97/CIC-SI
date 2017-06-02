@@ -57,5 +57,49 @@ class Model_teste extends CI_Model {
         var_dump($data);
         $this->db->insert('tbl_Empresa',$data);
     }
+
+
+    public function Insere_Cadastro_Setor($nome, $departamento){
+        //tbl_setor(id,nome,departamento)
+
+        $data['nome'] = $nome;
+        $data['departamento'] = $departamento;
+
+        //die(var_dump($data));
+
+        $this->db->insert('tbl_setor', $data);
+    }
+
+    public function Insere_Cadastro_CNAE($codigo, $descricao){
+        //tbl_cnae(id,codigo,descricao)
+
+        $data['codigo'] = $codigo;
+        $data['descricao'] = $descricao;
+
+        //die(var_dump($data));       
+
+        $this->db->insert('tbl_cnae', $data);
+    }
+
+    public function Insere_Cadastro_Departamento($id_secao, $nome){
+        //tbl_departamento(id,id_secao,nome)
+
+        $data['id_secao'] = $id_secao;
+        $data['nome'] = $nome;
+
+        //die(var_dump($data));       
+
+        $this->db->insert('tbl_departamento', $data);   
+    }
+
+    public function Insere_Cadastro_Grupo_Empresa($descricao){
+        //tbl_grupo_empresa(id,descricao)
+
+        $data['descricao'] = $descricao;
+
+        //die(var_dump($data));       
+
+        $this->db->insert('tbl_grupo_empresa', $data);   
+    }
 }
 

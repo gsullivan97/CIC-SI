@@ -89,7 +89,8 @@ $db['default'] = array(
 	*/
 	'hostname' => 'localhost',
 	'username' => 'root', //mudar para o login do seu database
-	'password' => '123456', //mudar para a senha do seu database
+	//'password' => '123456', //mudar para a senha do seu database
+	'password' => '',
 	'database' => 'RH_teste',
 
 	'dbdriver' => 'mysqli',
