@@ -78,6 +78,7 @@ class Main_Controller extends CI_Controller {
 
         if (isset($codigo, $descricao))
         {
+	    printf('Cadastro_CNAE funcionou!');
             $this->Model_teste->Insere_Cadastro_CNAE($codigo, $descricao);
         }
     }
@@ -100,6 +101,7 @@ class Main_Controller extends CI_Controller {
 
         if (isset($descricao))
         {
+	    printf('Cadastro_Grupo_Empresa funcionou!');
             $this->Model_teste->Insere_Cadastro_Grupo_Empresa($descricao);
         }
     }
@@ -123,6 +125,7 @@ class Main_Controller extends CI_Controller {
 
         if (isset($id_secao, $nome))
         {
+	    printf('Cadastro_Departamento funcionou!');
             $this->Model_teste->Insere_Cadastro_Departamento($id_secao, $nome);
         }
     }  
