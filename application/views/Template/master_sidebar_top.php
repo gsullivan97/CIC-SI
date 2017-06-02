@@ -23,9 +23,9 @@
 					</ul>
 				</li>
 
-				<li role="presentation" class="dropdown">
-					<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-						<i class="fa fa-envelope-o"></i>
+				<li role="presentation" class="dropdown" style="height: 57px;">
+					<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false" style="height: 58px; ">
+                                            <i class="fa fa-envelope-o" style="margin-top: 10px;"></i>
 						<span class="badge bg-green">2</span>
 					</a>
 					<ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
