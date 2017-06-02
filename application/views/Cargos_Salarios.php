@@ -39,9 +39,9 @@
                                 <?php
                                 for ($i = 1; $i <= 30; $i++) {
                                     echo '<tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>61</td>
+                        <td name="nome">Tiger Nixon</td>
+                        <td name="cargo">System Architect</td>
+                        <td name="idade">61</td>
                         <td>2011/04/25</td>
                         <td>$320,800</td>
                         <td><a href="Editar_CargosSalarios"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>

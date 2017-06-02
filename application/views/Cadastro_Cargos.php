@@ -44,10 +44,10 @@
                     <input type="text" id="descricao" class="form-control" name="descricao" required /><br />
 
                     <label for="beneficios">Benefícios * :</label><br>
-                    <input type="checkbox" name="transporte" /> Vale transporte <br />
-                    <input type="checkbox" name="alimentacao" /> Alimentação <br />
-                    <input type="checkbox" name="odontologico" /> Plano odontológico <br />
-                    <input type="checkbox" name="saude" /> Plano de saúde <br /> <br>
+                    <input type="checkbox" name="transporte" value="sim"/> Vale transporte <br />
+                    <input type="checkbox" name="alimentacao" value="sim" /> Alimentação <br />
+                    <input type="checkbox" name="odontologico" value="sim" /> Plano odontológico <br />
+                    <input type="checkbox" name="saude" value="sim" /> Plano de saúde <br /> <br>
 
                     <br>
                     <button class="btn btn-primary" type="submit">Cadastrar</button>

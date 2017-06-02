@@ -22,22 +22,40 @@ class Model_teste extends CI_Model {
         }
     }
     
-    public function Insere_Cadastro_Cargos($nome,$CBO,$tipo,$descricao)
+    public function Insere_Cadastro_Cargos($nome, $CBO, $formacaoDes, $formacaoMin,$cargaHr,$salario,$tipo,$descricao,$beneficio)
     {
         //criar variaveis no banco de acordo com o nome do indice do vetor data 
         //EX: Tabela:tbl_Cargos atributos: nome, CBO, tipo, descricao;
-        
         $data = array(
-        'nome' => $nome,
-        'CBO' => $CBO,
-        'tipo' => $tipo,
-        'descricao' => $descricao,
+            'nome' => $nome,
+            'CBO' => $CBO,
+            'formacao_desejada' => $formacaoDes,
+            'formacao_minima' => $formacaoMin,
+            'carga_horaria' => $cargaHr,
+            'salario' => $salario,
+            'tipo' => $tipo,
+            'descricao' => $descricao,
+            'transporte' => $beneficio['transporte'],
+            'alimentacao' => $beneficio['alimentacao'],
+            'odontologico' => $beneficio['odontologico'],
+            'saude' => $beneficio['saude'],
         );
         //printf("Cheguei aqui <br>");
-        print_r($data); 
+        //var_dump($data);
         
         //descomentar depois de configurado o banco
         $this->db->insert('tbl_Cargos', $data);
+    }
+    
+    public function Insere_Cadastro_Empresa($razaoSocial,$nomeFantasia,$naturezaJuridica,$telefone,$rua,$numero,$cep,$bairro,$complemento,$municipio,$unidadeFederal,$id_cnae,$id_departamento,$id_setor,$id_centro_de_custo,$id_grupo_empresa,$cnpj,$message)
+    {
+        $data=array('razaoSocial'=>$razaoSocial,'nomeFantasia'=>$nomeFantasia,'naturezaJuridica'=>$naturezaJuridica,'telefone'=>$telefone,
+            'rua'=>$rua,'numero'=>$numero,'cep'=>$cep,'bairro'=>$bairro,'complemento'=>$complemento,'municipio'=>$municipio,
+            'unidadeFederal'=>$unidadeFederal,'id_cnae'=>$id_cnae,'id_departamento'=>$id_departamento,'id_setor'=>$id_setor,
+            'id_centro_de_custo'=>$id_centro_de_custo,'id_grupo_empresa'=>$id_grupo_empresa,'cnpj'=>$cnpj,'message'=>$message);
+        
+        var_dump($data);
+        $this->db->insert('tbl_Empresa',$data);
     }
 }
 

@@ -8,7 +8,7 @@
         $.bootstrapGrowl('<?php printf($mensagem); ?>',{
             offset: {from: 'top', amount: 20},
             align: 'center', // ('left', 'right', or 'center')
-            type: 'warning',
+            type: '<?php printf($tipo); ?>', //(success, warning, info, danger)
             delay: 20000,
         });
     //});
