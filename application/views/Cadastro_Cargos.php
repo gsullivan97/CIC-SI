@@ -18,7 +18,7 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate>
+                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Cargos'); ?>" method="POST">
                     <label for="fullname">Nome * :</label>
                     <input type="text" id="fullname" class="form-control" name="fullname" required /><br />
 
@@ -37,6 +37,12 @@
                     <label for="salario">Salário * :</label>
                     <input type="text" id="salario" class="form-control" name="salario" required /><br />
 
+                    <label for="tipo">Tipo * :</label>
+                    <input type="text" id="tipo" class="form-control" name="tipo" required /><br />
+
+                    <label for="descricao">Descricao * :</label>
+                    <input type="text" id="descricao" class="form-control" name="descricao" required /><br />
+
                     <label for="beneficios">Benefícios * :</label><br>
                     <input type="checkbox" name="transporte" /> Vale transporte <br />
                     <input type="checkbox" name="alimentacao" /> Alimentação <br />
@@ -44,7 +50,7 @@
                     <input type="checkbox" name="saude" /> Plano de saúde <br /> <br>
 
                     <br>
-                    <span class="btn btn-primary">Cadastrar</span>
+                    <button class="btn btn-primary" type="submit">Cadastrar</button>
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 
                 </form>

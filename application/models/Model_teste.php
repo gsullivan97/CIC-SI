@@ -37,7 +37,7 @@ class Model_teste extends CI_Model {
         print_r($data); 
         
         //descomentar depois de configurado o banco
-        //$this->db->insert('tbl_Cargos', $data);
+        $this->db->insert('tbl_Cargos', $data);
     }
 }
 
