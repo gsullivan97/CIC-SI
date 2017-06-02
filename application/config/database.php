@@ -75,10 +75,23 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'us-cdbr-iron-east-03.cleardb.net',
-	'username' => 'b04a9776f3027e',//mudar para o login do seu database
-	'password' => '85b8e2cf',//mudar para a senha do seu database
-	'database' => 'heroku_343d7fa1da662ec',
+
+	/*
+		banco online
+	*/
+	//'hostname' => 'us-cdbr-iron-east-03.cleardb.net',
+	//'username' => 'b04a9776f3027e',
+	//'password' => '85b8e2cf',
+	//'database' => 'heroku_343d7fa1da662ec',
+
+	/*
+		banco local
+	*/
+	'hostname' => 'localhost',
+	'username' => 'root', //mudar para o login do seu database
+	'password' => '123456', //mudar para a senha do seu database
+	'database' => 'RH_teste',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
