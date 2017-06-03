@@ -90,6 +90,10 @@ class Main_Controller extends CI_Controller {
         }
     }
 
+    public function Cadastro_EPI(){
+        $this->render('Cadastro_EPI','Template',3);
+    }
+
     public function Cadastro_Empresa()
     {
         $this->render('Cadastro_Empresa','Template',3);
