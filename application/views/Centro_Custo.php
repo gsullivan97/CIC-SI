@@ -48,7 +48,7 @@
                               data-parsley-validation-threshold="1"></textarea>
                     <br />
                     <div class="clearfix"></div>
-                    <input type="submit" disabled class="btn btn-primary" value="Cadastrar" />
+                    <input type="submit" class="btn btn-primary" value="Cadastrar" />
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
                 </form>
                 <!-- end form for validations -->
