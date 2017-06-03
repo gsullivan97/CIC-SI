@@ -178,6 +178,13 @@ class Main_Controller extends CI_Controller {
 
     public function Cadastro_PCMSO(){
     	$this->render('Cadastro_PCMSO', 'Template', 3);
+
+        $tipoexame = $this->input->post('tipoexame');
+        $finexames = $this->input->post('finexames');
+
+        if(!empty($tipoexame) && !empty($finexames)):
+            $this->Model_teste->Insere_Cadastro_PCMSO($tipoexame,$finexames);
+        endif;
     }
 
     public function Editar_CargosSalarios()
