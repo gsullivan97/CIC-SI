@@ -129,24 +129,25 @@ class Main_Controller extends CI_Controller {
 
     public function Cadastro_Grupo_Empresa()
     {
-        $this->render('Cadastro_Grupo_Empresa', 'Template', 3);
-
         $descricao = $this->input->post('descricao');
 
         if (isset($descricao)) {
-            $this->Model_teste->Insere_Cadastro_Grupo_Empresa($descricao);
+            $insert = $this->Model_teste->Insere_Cadastro_Grupo_Empresa($descricao);
+            $this->data['grupoEmpresa']['insert'] = $insert;
         }
+        $this->render('Cadastro_Grupo_Empresa', 'Template', 3);
     }
 
     public function Centro_Custo()
     {
-        $this->render('Centro_Custo', 'Template', 3);
-        
         $codigo = $this->input->post('codigo');
         if (!empty($codigo)) {
             $descricao = $this->input->post('descricao');
-            $this->Model_teste->Insere_Centro_Custo($codigo, $descricao);
+            $insert = $this->Model_teste->Insere_Centro_Custo($codigo, $descricao);
+            $this->data['centroCusto']['insert'] = $insert;
         }
+        
+        $this->render('Centro_Custo', 'Template', 3);
     }
 
     public function Cadastro_Setor()

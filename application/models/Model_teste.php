@@ -98,7 +98,7 @@ class Model_teste extends CI_Model {
         $data = array(
             'descricao' => $descricao,
         );
-        $this->db->insert('grupo_empresa', $data);   
+        return $this->db->insert('grupo_empresa', $data);   
     }
     
     public function Insere_Centro_Custo($codigo, $descricao)
@@ -107,7 +107,6 @@ class Model_teste extends CI_Model {
             'codigo' => $codigo,
             'descricao' => $descricao,
         );
-        $this->db->insert('centro_custo', $data);
+        return $this->db->insert('centro_custo', $data);
     }
 }
-

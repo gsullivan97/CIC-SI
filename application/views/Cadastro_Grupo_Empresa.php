@@ -16,6 +16,29 @@
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
+                <?php if (isset($grupoEmpresa['insert'])) {
+                    if ($grupoEmpresa['insert']) {
+                        $msg = array(
+                            'text' => 'Cadastrado com sucesso!',
+                            'class' => 'success'
+                        );
+                    } else {
+                        $msg = array(
+                            'text' => 'Ocorreu um erro ao realizar o cadastro.',
+                            'class' => 'danger'
+                        );
+                    }
+                    if (isset($msg)) {
+                    ?>
+                    <div class="alert alert-<?= $msg['class'] ?> alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <?= $msg['text'] ?>
+                    </div>
+                    <?php
+                    }
+                } ?>
 
                 <!-- start form for validation -->
                 <form id="cadastro_grupo_empresa" data-parsley-validate action="" method="POST">
