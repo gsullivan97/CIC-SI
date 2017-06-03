@@ -95,11 +95,19 @@ class Model_teste extends CI_Model {
     public function Insere_Cadastro_Grupo_Empresa($descricao){
         //tbl_grupo_empresa(id,descricao)
 
-        $data['descricao'] = $descricao;
-
-        //die(var_dump($data));       
-
-        $this->db->insert('tbl_grupo_empresa', $data);   
+        $data = array(
+            'descricao' => $descricao,
+        );
+        $this->db->insert('grupo_empresa', $data);   
+    }
+    
+    public function Insere_Centro_Custo($codigo, $descricao)
+    {
+        $data = array(
+            'codigo' => $codigo,
+            'descricao' => $descricao,
+        );
+        $this->db->insert('centro_custo', $data);
     }
 }
 

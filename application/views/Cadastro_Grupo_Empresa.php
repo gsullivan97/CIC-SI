@@ -18,17 +18,17 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>" method="POST">
-                    <label for="descricao">Descrição (20 chars min, 100 max) :</label>
-                    <textarea id="descricao" required="required" class="form-control" name="descricao" 
+                <form id="cadastro_grupo_empresa" data-parsley-validate action="" method="POST">
+                    <label for="descricao">Descrição* (20 chars min, 100 max) :</label>
+                    <textarea id="descricao" required="required" class="form-control descricao" name="descricao" 
                               data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" 
-                              data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                              data-parsley-validation-threshold="10"></textarea><br />
+                              data-parsley-minlength-message="A descrição precisa ter no mínimo 20 caracteres."
+                              data-parsley-maxlength-message="A descrição está muito grande. Precisa ter menos que 100 caracteres."
+                              data-parsley-validation-threshold="1"></textarea><br />
 
                     <div class="clearfix"></div>
-                    <button class="btn btn-primary" type="submit">Cadastrar</button>
+                    <input type="submit" class="btn btn-primary" value="Cadastrar" />
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
-
                 </form>
                 <!-- end form for validations -->
 
