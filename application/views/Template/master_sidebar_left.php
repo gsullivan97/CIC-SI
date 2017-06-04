@@ -36,7 +36,7 @@
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Empresa'); ?>">Cadastrar Empresa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Curriculo'); ?>">Cadastrar Curriculo</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_EPI'); ?>">Cadastrar EPI</a></li>
-                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Funcionario'); ?>">Cadastrar Funcionário</a></li>
+                            <!-- <li><a href="<?php echo site_url('Main_Controller/Cadastro_Funcionario'); ?>">Cadastrar Funcionário</a></li> -->
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>">Cadastrar CNAE</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>">Cadastrar Grupo Empresa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Departamento'); ?>">Cadastrar Departamento</a></li>
@@ -45,7 +45,6 @@
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Setor'); ?>">Cadastrar Setor</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_PCMSO'); ?>">Cadastrar PCMSO</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_CAT'); ?>">Cadastrar CAT</a></li>
-                            <li><a href="<?php echo site_url('Main_Controller/Altera_Status_Pessoa'); ?>">Alterar Status</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fa fa-desktop"></i>Treinamentos </a></li>
