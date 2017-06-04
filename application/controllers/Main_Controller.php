@@ -46,7 +46,31 @@ class Main_Controller extends CI_Controller {
     
     public function Cargos_Salarios()
     {
+        $this->data['cargos_salarios'] = $this->Model_teste->Seleciona_Pessoa();
+        //var_dump($data['cargos_salarios']);
         $this->render('Cargos_Salarios','Template',2);
+    }
+    
+    public function Editar_CargosSalarios()
+    {
+        $this->data['cargo_salario'] = $this->Model_teste->Seleciona_Pessoa($this->input->post('codigo'));
+        //var_dump($this->data['cargo_salario']);
+        $this->render('Editar_CargosSalarios','Template',3);
+    }
+    
+    public function Atualiza_CargosSalarios()
+    {
+        $codigo=$this->input->post('codigo');
+        $nome=$this->input->post('nome');
+        $cargo=$this->input->post('cargo');
+        $idade=$this->input->post('idade');
+        $dataadm=$this->input->post('dataadm');
+        $salario=$this->input->post('salario');
+        
+        //var_dump($codigo,$nome,$cargo,$idade,$dataadm,$salario);
+        $this->Model_teste->Altera_CargosSalarios($codigo,$nome,$cargo,$idade,$dataadm,$salario);
+        $this->Menssagem('Atualizado com sucesso', 'success');
+        $this->index();
     }
     
     public function Cadastro_Cargos()
@@ -197,11 +221,6 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Unidades_Extintoras','Template',3);
     }
 
-    public function Editar_CargosSalarios()
-    {
-        $this->render('Editar_CargosSalarios','Template',3);
-    }
-
     public function Cadastro_Funcionario()
     {
         $this->render('Cadastro_Funcionario','Template',3);
@@ -215,9 +234,28 @@ class Main_Controller extends CI_Controller {
     {
         $this->data['alteraPessoa'] = $this->Model_teste->Seleciona_Pessoa($this->input->post('codigo'));
         //var_dump($this->data['alteraPessoa']);
-        $this->render('Altera_Status_Pessoa', 'Template', 3);   
+        $this->render('Altera_Status_Pessoa', 'Template', 3);
     }
-
+    
+    public function Altera_Status()
+    {
+        $codigo= $this->input->post('codigo');
+        $nome= $this->input->post('nome');
+        $status= $this->input->post('status');
+        
+        $cargo=$this->input->post('cargo');
+        $dataAdm=$this->input->post('dataAdm');
+        $dataDem=$this->input->post('dataDem');
+        $banco=$this->input->post('banco');
+        $agencia=$this->input->post('agencia');
+        $conta=$this->input->post('conta');
+        
+        $this->Model_teste->Altera_Pessoa($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta);
+        //var_dump($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta);
+        $this->Menssagem('Atualizado com sucesso', 'success');
+        $this->index();
+    }
+    
     public function Cadastro_CAT(){
         $this->render('Cadastro_CAT', 'Template', 3);
 

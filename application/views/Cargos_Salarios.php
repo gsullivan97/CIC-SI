@@ -37,15 +37,19 @@
 
                             <tbody>
                                 <?php
-                                for ($i = 1; $i <= 30; $i++) {
+                                //var_dump($cargos_salarios);
+                                foreach($cargos_salarios as $cargo_salario) {
                                     echo '<tr>
-                        <td name="nome">Tiger Nixon</td>
-                        <td name="cargo">System Architect</td>
-                        <td name="idade">61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td><a href="Editar_CargosSalarios"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
-                      </tr>';
+                                        <form action="'.site_url('Main_Controller/Editar_CargosSalarios').'" method="POST">
+                                        <input type="hidden" name="codigo" value="'.$cargo_salario->codigo.'" />
+                                        <td name="nome">'.$cargo_salario->nome.'</td>
+                                        <td name="cargo">'.$cargo_salario->cargo.'</td>
+                                        <td name="idade">'.$cargo_salario->idade.'</td>
+                                        <td name="data_admissao">'.$cargo_salario->data_admissao.'</td>
+                                        <td name="salario">'.$cargo_salario->salario.'</td>
+                                        <td><button type="submit" style="border: 0px; background-color: transparent;"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></button></td>
+                                      </tr>
+                                      </form>';
                                 }
                                 ?>
                             </tbody>

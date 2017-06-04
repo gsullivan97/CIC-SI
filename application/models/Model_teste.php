@@ -22,6 +22,32 @@ class Model_teste extends CI_Model {
         }
     }
     
+    public function Altera_CargosSalarios($codigo,$nome,$cargo,$idade,$dataadm,$salario)
+    {
+        if(isset($nome,$cargo,$idade,$dataadm,$salario))
+        {   
+            /*$query = $this->db->query("UPDATE tbl_pessoa SET nome='".$nome."',status='".$status."',
+            cargo='".$cargo."',data_admissao='".$dataAdm."',data_demissao='".$dataDem."',banco='".$banco."',agencia=".$agencia.",
+            conta=".$conta." WHERE codigo = ".$codigo);*/
+            
+            $data = array(
+                'nome'=>$nome,
+                'status'=>$status,
+                'cargo'=>$cargo,
+                'idade'=>$idade,
+                'data_admissao'=>$dataadm,
+                'salario'=>$salario,
+            );
+            
+            $this->db->where('codigo', $codigo);
+            $this->db->update('tbl_pessoa', $data);
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
     public function Seleciona_Pessoa($codigo)
     {
         if(isset($codigo))
@@ -33,6 +59,34 @@ class Model_teste extends CI_Model {
             $query = $this->db->query("SELECT * FROM tbl_Pessoa");
         }
         return $query->result();
+    }
+    
+    public function Altera_Pessoa($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta)
+    {
+        if(isset($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta))
+        {   
+            /*$query = $this->db->query("UPDATE tbl_pessoa SET nome='".$nome."',status='".$status."',
+            cargo='".$cargo."',data_admissao='".$dataAdm."',data_demissao='".$dataDem."',banco='".$banco."',agencia=".$agencia.",
+            conta=".$conta." WHERE codigo = ".$codigo);*/
+            
+            $data = array(
+                'nome'=>$nome,
+                'status'=>$status,
+                'cargo'=>$cargo,
+                'data_admissao'=>$dataAdm,
+                'data_demissao'=>$dataDem,
+                'banco'=>$banco,
+                'agencia'=>$agencia,
+                'conta'=>$conta,
+            );
+            
+            $this->db->where('codigo', $codigo);
+            $this->db->update('tbl_pessoa', $data);
+        }
+        else
+        {
+            return false;
+        }
     }
     
     public function Insere_Cadastro_Cargos($nome, $CBO, $formacaoDes, $formacaoMin,$cargaHr,$salario,$tipo,$descricao,$beneficio)
