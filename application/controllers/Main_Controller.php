@@ -211,8 +211,11 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Beneficios', 'Template', 3);
     }
 
-    public function Altera_Status_Pessoa(){
-        $this->render('Altera_Status_Pessoa', 'Template', 3);
+    public function Altera_Status_Pessoa()
+    {
+        $this->data['alteraPessoa'] = $this->Model_teste->Seleciona_Pessoa($this->input->post('codigo'));
+        //var_dump($this->data['alteraPessoa']);
+        $this->render('Altera_Status_Pessoa', 'Template', 3);   
     }
 
     public function Cadastro_CAT(){
@@ -233,6 +236,8 @@ class Main_Controller extends CI_Controller {
 
     public function Pesquisar_Pessoa()
     {
+        $this->data['Pessoas'] = $this->Model_teste->Seleciona_Pessoa();
+        //var_dump($this->data['Pessoas']);
         $this->render('Pesquisar_Pessoa','Template',3);
     }
 
@@ -328,6 +333,8 @@ class Main_Controller extends CI_Controller {
                     $this->data['the_view_data'] = $this->data;
                     $this->data['the_view_true'] = TRUE;
                     */
+                    //var_dump($this->data['Pessoas']);
+                
                     $this->data['the_view_content'] = (is_null($the_view)) ? '' : $this->load->view($the_view,$this->data, TRUE);
                     $this->load->view($template.'/master_view', $this->data);
                 }

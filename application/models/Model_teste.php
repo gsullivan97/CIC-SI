@@ -22,6 +22,19 @@ class Model_teste extends CI_Model {
         }
     }
     
+    public function Seleciona_Pessoa($codigo)
+    {
+        if(isset($codigo))
+        {
+            $query = $this->db->query("SELECT * FROM tbl_Pessoa WHERE codigo = ".$codigo);
+        }
+        else
+        {
+            $query = $this->db->query("SELECT * FROM tbl_Pessoa");
+        }
+        return $query->result();
+    }
+    
     public function Insere_Cadastro_Cargos($nome, $CBO, $formacaoDes, $formacaoMin,$cargaHr,$salario,$tipo,$descricao,$beneficio)
     {
         //criar variaveis no banco de acordo com o nome do indice do vetor data 

@@ -31,6 +31,7 @@
                             <div class="clearfix"></div>
                             * A pesquisa acontece em tempo real, conforme a digitação nos campos acima.
                         </form>
+                        
                         <!-- end form for validations -->
                     </div>
                     <div class="clearfix"></div><br />
@@ -46,40 +47,23 @@
                                     <th>Editar</th>
                                 </tr>
                             </thead>
-
+                            
                             <tbody>
-                                <tr>
-                                    <td name="codigo">1</td>
-                                    <td name="nome">Samuel Henrique</td>
-                                    <td name="cpf">164.653.123-60</td>
-                                    <td name="email">samuel.rizzon@gmail.com</td>
-                                    <td name="status">Funcionário</td>
-                                    <td><a href="Altera_Status_Pessoa"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td name="codigo">2</td>
-                                    <td name="nome">Greg Sullivan</td>
-                                    <td name="cpf">155.335.253-54</td>
-                                    <td>gregls@gmail.com</td>
-                                    <td name="status">Pessoa</td>
-                                    <td><a href="Altera_Status_Pessoa"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td name="codigo">3</td>
-                                    <td name="nome">Marcos Magno</td>
-                                    <td name="cpf">763.672.136-25</td>
-                                    <td>marcos.magno@gmail.com</td>
-                                    <td name="status">Candidato</td>
-                                    <td><a href="Altera_Status_Pessoa"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td name="codigo">4</td>
-                                    <td name="nome">Kassandra</td>
-                                    <td name="cpf">155.335.253-50</td>
-                                    <td>kassandra@gmail.com</td>
-                                    <td name="status">Funcionário</td>
-                                    <td><a href="Altera_Status_Pessoa"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a></td>
-                                </tr>
+                                <?php //var_dump($Pessoas); 
+                                foreach ($Pessoas as $pessoa){
+                                echo 
+                                ('<tr>
+                                    <form action="'.site_url('Main_Controller/Altera_Status_Pessoa').'" method="POST">
+                                    <td name="codigo"><input type="hidden" name="codigo" value="'.$pessoa->codigo.'" /> '.$pessoa->codigo.' </td>
+                                    <td name="nome">'.$pessoa->nome.' </td>
+                                    <td name="cpf">'.$pessoa->cpf.'</td>
+                                    <td name="email">'.$pessoa->email.'</td>
+                                    <td name="status">'.$pessoa->status.' </td>
+                                    <td><button type="submit" style="border: 0px; background-color: white;"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></button></td>
+                                    </form>
+                                </tr>');
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>
