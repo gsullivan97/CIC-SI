@@ -32,10 +32,10 @@
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Funcionario'); ?>">Cadastrar Funcionário</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Curriculo'); ?>">Cadastrar Curriculo</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>">Cadastrar CNAE</a></li>
-                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_PCMSO'); ?>">Cadastrar PCMSO</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>">Cadastrar Grupo Empresa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Departamento'); ?>">Cadastrar Departamento</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Centro_Custo'); ?>">Cadastrar Centro Custo</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Unidades_Extintoras'); ?>">Cadastrar Unidades Extintoras</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Setor'); ?>">Cadastrar Setor</a></li>
                         </ul>
                     </li>
@@ -50,7 +50,11 @@
                         </ul>
                     </li>
                     <li><a href="#"><i class="fa fa-bar-chart-o"></i> Departamento Pessoal</a></li>
-                    <li><a href="#"><i class="fa fa-shield"></i>Segurança</a></li>
+                    <li><a><i class="fa fa-shield"></i> Segurança <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_PCMSO'); ?>">Cadastrar PCMSO</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
