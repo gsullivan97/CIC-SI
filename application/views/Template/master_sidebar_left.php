@@ -43,6 +43,9 @@
                             <li><a href="<?php echo site_url('Main_Controller/Centro_Custo'); ?>">Cadastrar Centro Custo</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Unidades_Extintoras'); ?>">Cadastrar Unidades Extintoras</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Setor'); ?>">Cadastrar Setor</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_PCMSO'); ?>">Cadastrar PCMSO</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_CAT'); ?>">Cadastrar CAT</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Altera_Status_Pessoa'); ?>">Alterar Status</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fa fa-desktop"></i>Treinamentos </a></li>
@@ -52,14 +55,11 @@
                             <li><a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>">Cargos, Salários e Benefícios</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Cargos'); ?>">Cadastrar Cargos</a></li>
                             <li><a href="#">Cadastrar Salários</a></li>
-                            <li><a href="#">Cadastrar Benefícios</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Beneficios'); ?>">Cadastrar Benefícios</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fa fa-bar-chart-o"></i> Departamento Pessoal</a></li>
                     <li><a><i class="fa fa-shield"></i> Segurança <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_PCMSO'); ?>">Cadastrar PCMSO</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>

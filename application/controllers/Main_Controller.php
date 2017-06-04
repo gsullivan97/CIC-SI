@@ -207,6 +207,18 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Funcionario','Template',3);
     }
 
+    public function Cadastro_Beneficios(){
+        $this->render('Cadastro_Beneficios', 'Template', 3);
+    }
+
+    public function Altera_Status_Pessoa(){
+        $this->render('Altera_Status_Pessoa', 'Template', 3);
+    }
+
+    public function Cadastro_CAT(){
+        $this->render('Cadastro_CAT', 'Template', 3);
+    }
+
     public function Pesquisar_Pessoa()
     {
         $this->render('Pesquisar_Pessoa','Template',3);
