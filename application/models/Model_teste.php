@@ -119,4 +119,17 @@ class Model_teste extends CI_Model {
 
         return $this->db->insert('tbl_PCMSO', $data);
     }
+
+    public function Insere_Cadastro_CAT($carac,$dataabert, $registrocat){
+        //tbl_cat(id,carac,dataabert,registrocat)
+
+        $data['carac'] = $carac;
+        $data['dataabert'] = $dataabert;
+        $data['registrocat'] = $registrocat;
+
+        //die(var_dump($data));
+
+        return $this->db->insert('tbl_cat', $data);
+
+    }
 }
