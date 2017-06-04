@@ -217,6 +217,18 @@ class Main_Controller extends CI_Controller {
 
     public function Cadastro_CAT(){
         $this->render('Cadastro_CAT', 'Template', 3);
+
+        $carac = $this->input->post('carac');
+        $dataabert = $this->input->post('dataabert');
+        $registrocat = ($this->input->post('registrocat')) == 'on' ? 1 : 0;
+        
+
+        //print_r($registrocat);
+        if(!empty($carac) && !empty($dataabert)):
+            //die(var_dump($registrocat));
+            $this->Model_teste->Insere_Cadastro_CAT($carac,$dataabert, $registrocat);
+        endif;
+
     }
 
     public function Pesquisar_Pessoa()
