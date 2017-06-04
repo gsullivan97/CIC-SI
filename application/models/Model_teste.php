@@ -109,4 +109,14 @@ class Model_teste extends CI_Model {
         );
         return $this->db->insert('centro_custo', $data);
     }
+
+    public function Insere_Cadastro_PCMSO($tipoexame,$finexames)
+    {
+        //tbl_pcmso(id,tipoexame,finexame)
+
+        $data['tipoexame'] = $tipoexame;
+        $data['finexame'] = $finexames;
+
+        return $this->db->insert('tbl_PCMSO', $data);
+    }
 }

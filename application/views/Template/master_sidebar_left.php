@@ -29,8 +29,9 @@
                     <li><a><i class="fa fa-edit"></i> Cadastros Básicos <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Empresa'); ?>">Cadastrar Empresa</a></li>
-                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Funcionario'); ?>">Cadastrar Funcionário</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Curriculo'); ?>">Cadastrar Curriculo</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_EPI'); ?>">Cadastrar EPI</a></li>
+                            <li><a href="<?php echo site_url('Main_Controller/Cadastro_Funcionario'); ?>">Cadastrar Funcionário</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_CNAE'); ?>">Cadastrar CNAE</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Grupo_Empresa'); ?>">Cadastrar Grupo Empresa</a></li>
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Departamento'); ?>">Cadastrar Departamento</a></li>

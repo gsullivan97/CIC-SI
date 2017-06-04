@@ -90,6 +90,10 @@ class Main_Controller extends CI_Controller {
         }
     }
 
+    public function Cadastro_EPI(){
+        $this->render('Cadastro_EPI','Template',3);
+    }
+
     public function Cadastro_Empresa()
     {
         $this->render('Cadastro_Empresa','Template',3);
@@ -179,6 +183,13 @@ class Main_Controller extends CI_Controller {
     public function Cadastro_PCMSO()
     {
     	$this->render('Cadastro_PCMSO', 'Template', 3);
+
+        $tipoexame = $this->input->post('tipoexame');
+        $finexames = $this->input->post('finexames');
+
+        if(!empty($tipoexame) && !empty($finexames)):
+            $this->Model_teste->Insere_Cadastro_PCMSO($tipoexame,$finexames);
+        endif;
     }
 
     public function Cadastro_Unidades_Extintoras()
