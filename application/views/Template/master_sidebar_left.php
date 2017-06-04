@@ -26,6 +26,11 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                     <li><a href="<?php echo site_url('Main_Controller/index'); ?>"><i class="fa fa-home"></i> Home </a></li>
+                    <li><a href="#"><i class="fa fa-search"></i>Pesquisas <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="<?php echo site_url('Main_Controller/Pesquisar_Pessoa'); ?>">Pesquisar Pessoa</a></li>
+                        </ul>
+                    </li>
                     <li><a><i class="fa fa-edit"></i> Cadastros Básicos <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo site_url('Main_Controller/Cadastro_Empresa'); ?>">Cadastrar Empresa</a></li>

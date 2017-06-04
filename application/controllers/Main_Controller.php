@@ -207,6 +207,12 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Funcionario','Template',3);
     }
 
+    public function Pesquisar_Pessoa()
+    {
+        $this->render('Pesquisar_Pessoa','Template',3);
+    }
+
+
     public function Login()
     {
         $this->load->view('Login');
