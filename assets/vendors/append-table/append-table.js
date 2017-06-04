@@ -62,15 +62,15 @@ $(document).ready(function () {
 });
 
 function showDiv(elem){
+	var botao = $("#alterar_status");
+
 	if(elem.value == "Funcionário"){
 		$("#pay_block").slideToggle("slow");
-
-		var botao = $("#alterar_status");
-
 		botao.text("Alterar e Salvar");
 	}
 	else{
 		$("#pay_block").hide(1000);
+		botao.text("Alterar Status");
 	}
 
 }
