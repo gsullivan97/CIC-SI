@@ -58,7 +58,22 @@ $(document).ready(function () {
 		}
 		]
 	});
+
 });
+
+function showDiv(elem){
+	if(elem.value == "Funcionário"){
+		$("#pay_block").slideToggle("slow");
+
+		var botao = $("#alterar_status");
+
+		botao.text("Alterar e Salvar");
+	}
+	else{
+		$("#pay_block").hide(1000);
+	}
+
+}
 
 $("#add_formacao_academica").click(function(){
 	var cur = $("#curso").val();
