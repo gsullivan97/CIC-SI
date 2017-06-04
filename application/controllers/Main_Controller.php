@@ -176,8 +176,14 @@ class Main_Controller extends CI_Controller {
         }
     }  
 
-    public function Cadastro_PCMSO(){
+    public function Cadastro_PCMSO()
+    {
     	$this->render('Cadastro_PCMSO', 'Template', 3);
+    }
+
+    public function Cadastro_Unidades_Extintoras()
+    {
+        $this->render('Cadastro_Unidades_Extintoras','Template',3);
     }
 
     public function Editar_CargosSalarios()
