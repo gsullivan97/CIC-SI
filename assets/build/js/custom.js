@@ -217,6 +217,21 @@ $(document).ready(function() {
 });
 // /iCheck
 
+
+//Filter collumn
+function filterColumn ( i ) {
+    $('#datatable').DataTable().column( i ).search(
+        $('#col'+i+'_filter').val()
+    ).draw();
+}
+
+$(document).ready(function() {
+$('.column_filter').on( 'keyup click', function () {
+        filterColumn( $(this).parents('div').attr('data-column') );
+    } );
+});
+// /Filter collumn
+
 // Table
 $('table input').on('ifChecked', function () {
 	checkState = '';
