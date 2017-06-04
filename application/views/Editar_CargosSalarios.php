@@ -18,7 +18,7 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate>
+                <form id="" data-parsley-validate>
                     <label for="nome">Nome * :</label>
                     <input type="text" id="nome" class="form-control" name="nome" value="José Carlos Ribeiro" required disabled /><br />
 
