@@ -5,12 +5,6 @@
             <div class="title_left">
                 <h3>Cargos/Salários <small>Edite as informações dos funcionários</small></h3>
             </div>
-
-            <div class="title_right">
-                <div class="col-md-4 col-sm-5 col-xs-12 pull-right">
-                    <a href="<?php echo site_url('Main_Controller/Cadastro_Cargos'); ?>" class="btn btn-primary btn-sm">Cadastrar novo cargo</a>
-                </div>
-            </div>
         </div>
 
         <div class="clearfix"></div>
