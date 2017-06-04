@@ -18,7 +18,8 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Atualiza_CargosSalarios'); ?>" method="POST">
+                <form id="" data-parsley-validate action="<?php echo site_url('Main_Controller/Atualiza_CargosSalarios'); ?>" method="POST">
+
                     <input type="hidden" name="codigo" value="<?php echo $cargo_salario[0]->codigo; ?>" />
                     <label for="nome">Nome * :</label>
                     <input type="text" id="nome" class="form-control" name="nome" value="<?php echo $cargo_salario[0]->nome; ?>" required  readonly="readonly"/><br />
