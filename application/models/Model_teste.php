@@ -197,6 +197,19 @@ class Model_teste extends CI_Model {
 
         return $this->db->insert('tbl_PCMSO', $data);
     }
+    
+    public function Insere_Cadastro_Unidades_Extintoras($id, $message, $finalidadeUso, $numCert, $localInst, $dataCadastro, $validade)
+    {
+        $data['id'] = $id;
+        $data['descricao'] = $message;
+        $data['finalidade'] = $finalidadeUso;
+        $data['n_certificado'] = $numCert;
+        $data['local'] = $localInst;
+        $data['data_cadastro'] = $dataCadastro;
+        $data['validade'] = $validade;
+        
+        $this->db->insert('unidades extintoras', $data);
+    }
 
     public function Insere_Cadastro_CAT($carac,$dataabert, $registrocat){
         //tbl_cat(id,carac,dataabert,registrocat)
