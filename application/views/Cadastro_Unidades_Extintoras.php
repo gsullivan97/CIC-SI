@@ -18,7 +18,7 @@
             <div class="x_content">
 
                 <!-- start form for validation -->
-                <form id="demo-form" data-parsley-validate>
+                <form id="demo-form" data-parsley-validate action="<?php echo site_url('Main_Controller/Cadastro_Unidades_Extintoras'); ?>" method="POST">
                     <label for="id">ID * :</label>
                     <input type="text" id="id" class="form-control" name="id" required /><br />
                     <label for="message">Descrição * :</label>
@@ -37,7 +37,7 @@
                     data-inputmask="'mask': '99/99/9999'"/><br />
 
                     <br/>
-                    <span class="btn btn-primary">Cadastrar</span>
+                    <button class="btn btn-primary" type="submit">Cadastrar</button>
                     <a href="<?php echo site_url('Main_Controller/Cargos_Salarios'); ?>" class="btn btn-primary">Cancelar</a>
 
                 </form>
