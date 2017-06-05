@@ -231,7 +231,21 @@ class Main_Controller extends CI_Controller {
 
     public function Cadastro_Unidades_Extintoras()
     {
-        $this->render('Cadastro_Unidades_Extintoras','Template',3);
+        $this->render('Cadastro_Unidades_Extintoras', 'Template', 3);
+	
+	$id = $this->input->post('id');
+        $message = $this->input->post('message');
+	$finalidadeUso = $this->input->post('finalidadeUso');
+	$numCert = $this->input->post('numCert');
+	$localInst = $this->input->post('localInst');
+	$dataCadastro = $this->input->post('dataCadastro');
+	$validade = $this->input->post('validade');
+	
+	if (isset($id, $message, $finalidadeUso, $numCert, $localInst, $dataCadastro, $validade))
+        {
+	    //printf('Cadastro_Unidades_Extintoras funcionou!');
+            $this->Model_teste->Insere_Cadastro_Unidades_Extintoras($id, $message, $finalidadeUso, $numCert, $localInst, $dataCadastro, $validade);
+        }
     }
 
     public function Cadastro_Funcionario()
