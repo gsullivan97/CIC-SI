@@ -56,7 +56,7 @@
                     </div> 
 
                     <button class="btn btn-primary" type="submit" id="alterar_status">Alterar status</button>
-                    <a href="<?php echo site_url('Main_Controller'); ?>" class="btn btn-primary">Cancelar</a>
+                    <a href="<?php echo site_url('Main_Controller/Pesquisar_Pessoa'); ?>" class="btn btn-primary">Cancelar</a>
                 </form>
                 <!-- end form for validations -->
             </div>    
