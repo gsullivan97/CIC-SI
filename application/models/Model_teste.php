@@ -147,6 +147,17 @@ class Model_teste extends CI_Model {
 
         $this->db->insert('tbl_cnae', $data);
     }
+    
+    public function Insere_Cadastro_EPI($descricao, $finalidade, $data_de_validade, $data_de_cadastro, $n_do_certificado)
+    {
+        $data['descricao_equipamento'] = $descricao;
+        $data['uso'] = $finalidade;
+        $data['data_validade'] = $data_de_validade;
+        $data['data_cadastro'] = $data_de_cadastro;
+        $data['n_certificado'] = $n_do_certificado;
+        
+        $this->db->insert('epi', $data);
+    }
 
     public function Insere_Cadastro_Departamento($id_secao, $nome){
         //tbl_departamento(id,id_secao,nome)
