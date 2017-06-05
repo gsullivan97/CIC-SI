@@ -301,7 +301,7 @@ class Main_Controller extends CI_Controller {
 
     public function Pesquisar_Pessoa()
     {
-        $this->data['Pessoas'] = $this->Model_teste->Seleciona_Pessoa();
+        $this->data['Pessoas'] = $this->Model_teste->Seleciona_Pessoa($this->input->post('codigo'));
         //var_dump($this->data['Pessoas']);
         $this->render('Pesquisar_Pessoa','Template',3);
     }
