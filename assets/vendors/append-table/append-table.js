@@ -88,8 +88,8 @@ $("#add_formacao_academica").click(function(){
 	var table = $('#gridFormacao').DataTable();
 
 	table.rows.add( [ {
-		"Instituição": 	cur,
-		"Curso":   		ins,
+		"Instituição": 	ins,
+		"Curso":   		cur,
 		"Estado":    	est.text(),
 		"Deletar": null
 	}] )
