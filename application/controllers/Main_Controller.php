@@ -114,8 +114,21 @@ class Main_Controller extends CI_Controller {
         }
     }
 
-    public function Cadastro_EPI(){
-        $this->render('Cadastro_EPI','Template',3);
+    public function Cadastro_EPI()
+    {
+        $this->render('Cadastro_EPI', 'Template', 3);
+	
+	$descricao = $this->input->post('descricao');
+        $finalidade = $this->input->post('finalidade');
+	$data_de_validade = $this->input->post('data_de_validade');
+	$data_de_cadastro = $this->input->post('data_de_cadastro');
+	$n_do_certificado = $this->input->post('n_do_certificado');
+	
+	if (isset($descricao, $finalidade, $data_de_validade, $data_de_cadastro, $n_do_certificado))
+        {
+	    //printf('Cadastro_EPI funcionou!');
+            $this->Model_teste->Insere_Cadastro_EPI($descricao, $finalidade, $data_de_validade, $data_de_cadastro, $n_do_certificado);
+        }
     }
 
     public function Cadastro_Empresa()
