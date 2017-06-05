@@ -59,7 +59,7 @@
                                     <td name="cpf">'.$pessoa->cpf.'</td>
                                     <td name="email">'.$pessoa->email.'</td>
                                     <td name="status">'.$pessoa->status.' </td>
-                                    <td><button type="submit" style="border: 0px; background-color: white;"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></button></td>
+                                    <td><button type="submit" style="border: 0px; background-color: transparent;"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></button></td>
                                     </form>
                                 </tr>');
                                 }
