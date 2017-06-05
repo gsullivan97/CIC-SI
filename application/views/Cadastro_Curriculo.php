@@ -192,7 +192,7 @@
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-md-3 col-sm-3 col-xs-12">Estado</label>
+							<label class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
 							<div class="col-md-4 col-sm-4 col-xs-4">
 								<select id="estado" class="form-control select2_single">
 									<option value="" disabled selected>Escolha uma opção</option>
@@ -213,7 +213,7 @@
 									<tr>
 										<td>Instituição</td>
 										<td>Curso</td>
-										<td>Estado</td>
+										<td>Status</td>
 										<td width="5px;">Deletar</td>
 									</tr>
 								</thead>
