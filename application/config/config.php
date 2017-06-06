@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost/TrabalhoSI/CIC-SI/';
-$config['base_url'] = 'http://localhost/CIC-SI/';
+$config['base_url'] = 'http://localhost/cic/';
 
 /*
 |--------------------------------------------------------------------------

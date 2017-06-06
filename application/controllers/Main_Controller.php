@@ -46,7 +46,31 @@ class Main_Controller extends CI_Controller {
     
     public function Cargos_Salarios()
     {
+        $this->data['cargos_salarios'] = $this->Model_teste->Seleciona_Pessoa();
+        //var_dump($data['cargos_salarios']);
         $this->render('Cargos_Salarios','Template',2);
+    }
+    
+    public function Editar_CargosSalarios()
+    {
+        $this->data['cargo_salario'] = $this->Model_teste->Seleciona_Pessoa($this->input->post('codigo'));
+        //var_dump($this->data['cargo_salario']);
+        $this->render('Editar_CargosSalarios','Template',3);
+    }
+    
+    public function Atualiza_CargosSalarios()
+    {
+        $codigo=$this->input->post('codigo');
+        $nome=$this->input->post('nome');
+        $cargo=$this->input->post('cargo');
+        $idade=$this->input->post('idade');
+        $dataadm=$this->input->post('dataadm');
+        $salario=$this->input->post('salario');
+        
+        //var_dump($codigo,$nome,$cargo,$idade,$dataadm,$salario);
+        $this->Model_teste->Altera_CargosSalarios($codigo,$nome,$cargo,$idade,$dataadm,$salario);
+        $this->Menssagem('Atualizado com sucesso', 'success');
+        $this->index();
     }
     
     public function Cadastro_Cargos()
@@ -90,32 +114,45 @@ class Main_Controller extends CI_Controller {
         }
     }
 
-    public function Cadastro_EPI(){
-        $this->render('Cadastro_EPI','Template',3);
+    public function Cadastro_EPI()
+    {
+        $this->render('Cadastro_EPI', 'Template', 3);
+	
+	$descricao = $this->input->post('descricao');
+        $finalidade = $this->input->post('finalidade');
+	$data_de_validade = $this->input->post('data_de_validade');
+	$data_de_cadastro = $this->input->post('data_de_cadastro');
+	$n_do_certificado = $this->input->post('n_do_certificado');
+	
+	if (isset($descricao, $finalidade, $data_de_validade, $data_de_cadastro, $n_do_certificado))
+        {
+	    //printf('Cadastro_EPI funcionou!');
+            $this->Model_teste->Insere_Cadastro_EPI($descricao, $finalidade, $data_de_validade, $data_de_cadastro, $n_do_certificado);
+        }
     }
 
     public function Cadastro_Empresa()
     {
         $this->render('Cadastro_Empresa','Template',3);
         
-        $razaoSocial=$this->input->post('razaoSocial');
-        $nomeFantasia=$this->input->post('nomeFantasia');//naturezaJuridica
-        $naturezaJuridica=$this->input->post('naturezaJuridica');//naturezaJuridica
-        $telefone=$this->input->post('telefone');//telefone
+        $razaoSocial=$this->input->post('razao_social');
+        $nomeFantasia=$this->input->post('nome_fantasia');//naturezaJuridica
+        $naturezaJuridica=$this->input->post('natureza_juridica');//naturezaJuridica
+        $cnpj=$this->input->post('cnpj');
         $rua=$this->input->post('rua');
         $numero=$this->input->post('numero');
         $cep=$this->input->post('cep');
         $bairro=$this->input->post('bairro');
-        $complemento=$this->input->post('complemento');
         $municipio=$this->input->post('municipio');
-        $unidadeFederal=$this->input->post('unidadeFederal');
-        $id_cnae=$this->input->post('id_cnae');
+        $unidadeFederal=$this->input->post('uf');
+        $complemento=$this->input->post('complemento');
+        $telefone=$this->input->post('telefone');//telefone
+		$id_cnae=$this->input->post('id_cnae');
+		$id_centro_de_custo=$this->input->post('id_centro_custo');
         $id_departamento=$this->input->post('id_departamento');
         $id_setor=$this->input->post('id_setor');
-        $id_centro_de_custo=$this->input->post('id_centro_de_custo');
-        $id_grupo_empresa=$this->input->post('id_grupo_empresa');
-        $cnpj=$this->input->post('cnpj');
-        $message=$this->input->post('message');
+   		$id_grupo_empresa=$this->input->post('id_grupo_empresa');
+		$message=$this->input->post('message');
         
         if (isset($razaoSocial,$nomeFantasia,$naturezaJuridica,$telefone,$rua,$numero,$cep,$bairro,$complemento,
             $municipio,$unidadeFederal,$id_cnae,$id_departamento,$id_setor,$id_centro_de_custo,$id_grupo_empresa,$cnpj,$message))
@@ -194,12 +231,21 @@ class Main_Controller extends CI_Controller {
 
     public function Cadastro_Unidades_Extintoras()
     {
-        $this->render('Cadastro_Unidades_Extintoras','Template',3);
-    }
-
-    public function Editar_CargosSalarios()
-    {
-        $this->render('Editar_CargosSalarios','Template',3);
+        $this->render('Cadastro_Unidades_Extintoras', 'Template', 3);
+	
+	$id = $this->input->post('id');
+        $message = $this->input->post('message');
+	$finalidadeUso = $this->input->post('finalidadeUso');
+	$numCert = $this->input->post('numCert');
+	$localInst = $this->input->post('localInst');
+	$dataCadastro = $this->input->post('dataCadastro');
+	$validade = $this->input->post('validade');
+	
+	if (isset($id, $message, $finalidadeUso, $numCert, $localInst, $dataCadastro, $validade))
+        {
+	    //printf('Cadastro_Unidades_Extintoras funcionou!');
+            $this->Model_teste->Insere_Cadastro_Unidades_Extintoras($id, $message, $finalidadeUso, $numCert, $localInst, $dataCadastro, $validade);
+        }
     }
 
     public function Cadastro_Funcionario()
@@ -211,10 +257,32 @@ class Main_Controller extends CI_Controller {
         $this->render('Cadastro_Beneficios', 'Template', 3);
     }
 
-    public function Altera_Status_Pessoa(){
+    public function Altera_Status_Pessoa()
+    {
+        $this->data['alteraPessoa'] = $this->Model_teste->Seleciona_Pessoa($this->input->post('codigo'));
+        //var_dump($this->data['alteraPessoa']);
         $this->render('Altera_Status_Pessoa', 'Template', 3);
     }
-
+    
+    public function Altera_Status()
+    {
+        $codigo= $this->input->post('codigo');
+        $nome= $this->input->post('nome');
+        $status= $this->input->post('status');
+        
+        $cargo=$this->input->post('cargo');
+        $dataAdm=$this->input->post('dataAdm');
+        $dataDem=$this->input->post('dataDem');
+        $banco=$this->input->post('banco');
+        $agencia=$this->input->post('agencia');
+        $conta=$this->input->post('conta');
+        
+        $this->Model_teste->Altera_Pessoa($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta);
+        //var_dump($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta);
+        $this->Menssagem('Atualizado com sucesso', 'success');
+        $this->index();
+    }
+    
     public function Cadastro_CAT(){
         $this->render('Cadastro_CAT', 'Template', 3);
 
@@ -233,6 +301,8 @@ class Main_Controller extends CI_Controller {
 
     public function Pesquisar_Pessoa()
     {
+        $this->data['Pessoas'] = $this->Model_teste->Seleciona_Pessoa($this->input->post('codigo'));
+        //var_dump($this->data['Pessoas']);
         $this->render('Pesquisar_Pessoa','Template',3);
     }
 
@@ -328,6 +398,8 @@ class Main_Controller extends CI_Controller {
                     $this->data['the_view_data'] = $this->data;
                     $this->data['the_view_true'] = TRUE;
                     */
+                    //var_dump($this->data['Pessoas']);
+                
                     $this->data['the_view_content'] = (is_null($the_view)) ? '' : $this->load->view($the_view,$this->data, TRUE);
                     $this->load->view($template.'/master_view', $this->data);
                 }
