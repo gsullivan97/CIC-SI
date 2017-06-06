@@ -22,6 +22,73 @@ class Model_teste extends CI_Model {
         }
     }
     
+    public function Altera_CargosSalarios($codigo,$nome,$cargo,$idade,$dataadm,$salario)
+    {
+        if(isset($nome,$cargo,$idade,$dataadm,$salario))
+        {   
+            /*$query = $this->db->query("UPDATE tbl_pessoa SET nome='".$nome."',status='".$status."',
+            cargo='".$cargo."',data_admissao='".$dataAdm."',data_demissao='".$dataDem."',banco='".$banco."',agencia=".$agencia.",
+            conta=".$conta." WHERE codigo = ".$codigo);*/
+            
+            $data = array(
+                'nome'=>$nome,
+                'status'=>$status,
+                'cargo'=>$cargo,
+                'idade'=>$idade,
+                'data_admissao'=>$dataadm,
+                'salario'=>$salario,
+            );
+            
+            $this->db->where('codigo', $codigo);
+            $this->db->update('tbl_pessoa', $data);
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public function Seleciona_Pessoa($codigo)
+    {
+        if(isset($codigo))
+        {
+            $query = $this->db->query("SELECT * FROM tbl_Pessoa WHERE codigo = ".$codigo);
+        }
+        else
+        {
+            $query = $this->db->query("SELECT * FROM tbl_Pessoa");
+        }
+        return $query->result();
+    }
+    
+    public function Altera_Pessoa($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta)
+    {
+        if(isset($codigo,$nome,$status,$cargo,$dataAdm,$dataDem,$banco,$agencia,$conta))
+        {   
+            /*$query = $this->db->query("UPDATE tbl_pessoa SET nome='".$nome."',status='".$status."',
+            cargo='".$cargo."',data_admissao='".$dataAdm."',data_demissao='".$dataDem."',banco='".$banco."',agencia=".$agencia.",
+            conta=".$conta." WHERE codigo = ".$codigo);*/
+            
+            $data = array(
+                'nome'=>$nome,
+                'status'=>$status,
+                'cargo'=>$cargo,
+                'data_admissao'=>$dataAdm,
+                'data_demissao'=>$dataDem,
+                'banco'=>$banco,
+                'agencia'=>$agencia,
+                'conta'=>$conta,
+            );
+            
+            $this->db->where('codigo', $codigo);
+            $this->db->update('tbl_pessoa', $data);
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
     public function Insere_Cadastro_Cargos($nome, $CBO, $formacaoDes, $formacaoMin,$cargaHr,$salario,$tipo,$descricao,$beneficio)
     {
         //criar variaveis no banco de acordo com o nome do indice do vetor data 
@@ -80,6 +147,17 @@ class Model_teste extends CI_Model {
 
         $this->db->insert('tbl_cnae', $data);
     }
+    
+    public function Insere_Cadastro_EPI($descricao, $finalidade, $data_de_validade, $data_de_cadastro, $n_do_certificado)
+    {
+        $data['descricao_equipamento'] = $descricao;
+        $data['uso'] = $finalidade;
+        $data['data_validade'] = $data_de_validade;
+        $data['data_cadastro'] = $data_de_cadastro;
+        $data['n_certificado'] = $n_do_certificado;
+        
+        $this->db->insert('epi', $data);
+    }
 
     public function Insere_Cadastro_Departamento($id_secao, $nome){
         //tbl_departamento(id,id_secao,nome)
@@ -118,6 +196,19 @@ class Model_teste extends CI_Model {
         $data['finexame'] = $finexames;
 
         return $this->db->insert('tbl_PCMSO', $data);
+    }
+    
+    public function Insere_Cadastro_Unidades_Extintoras($id, $message, $finalidadeUso, $numCert, $localInst, $dataCadastro, $validade)
+    {
+        $data['id'] = $id;
+        $data['descricao'] = $message;
+        $data['finalidade'] = $finalidadeUso;
+        $data['n_certificado'] = $numCert;
+        $data['local'] = $localInst;
+        $data['data_cadastro'] = $dataCadastro;
+        $data['validade'] = $validade;
+        
+        $this->db->insert('unidades extintoras', $data);
     }
 
     public function Insere_Cadastro_CAT($carac,$dataabert, $registrocat){

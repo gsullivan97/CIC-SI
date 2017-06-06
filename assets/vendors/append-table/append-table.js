@@ -58,7 +58,22 @@ $(document).ready(function () {
 		}
 		]
 	});
+
 });
+
+function showDiv(elem){
+	var botao = $("#alterar_status");
+
+	if(elem.value == "Funcionário"){
+		$("#pay_block").slideToggle("slow");
+		botao.text("Alterar e Salvar");
+	}
+	else{
+		$("#pay_block").hide(1000);
+		botao.text("Alterar Status");
+	}
+
+}
 
 $("#add_formacao_academica").click(function(){
 	var cur = $("#curso").val();
@@ -73,8 +88,8 @@ $("#add_formacao_academica").click(function(){
 	var table = $('#gridFormacao').DataTable();
 
 	table.rows.add( [ {
-		"Instituição": 	cur,
-		"Curso":   		ins,
+		"Instituição": 	ins,
+		"Curso":   		cur,
 		"Estado":    	est.text(),
 		"Deletar": null
 	}] )
